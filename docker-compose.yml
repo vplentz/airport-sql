@@ -9,6 +9,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+    command: --secure-file-priv=/raw_data/
 
   adminer:
     image: adminer
