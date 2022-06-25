@@ -1,0 +1,2 @@
+CREATE DATABASE domestic_flights;
+SHOW DATABASES;
