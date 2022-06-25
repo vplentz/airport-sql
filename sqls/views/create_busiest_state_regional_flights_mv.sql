@@ -1,1 +1,1 @@
-CREATE TABLE busiest_state_regional_trips_mv (STATE VARCHAR(15), NUMBER_OF_FLIGHTS NUMERIC);
+CREATE TABLE busiest_state_regional_flights_mv (STATE VARCHAR(15), NUMBER_OF_FLIGHTS NUMERIC);

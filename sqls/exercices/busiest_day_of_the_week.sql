@@ -1,5 +1,3 @@
-INSERT INTO
-    busiest_day_of_week_mv
 SELECT
     DAY_OF_WEEK,
     COUNT(*) AS NUMBER_OF_FLIGHTS
@@ -8,4 +6,6 @@ FROM
 GROUP BY
     DAY_OF_WEEK
 ORDER BY
-    COUNT(*) DESC;
+    COUNT(*) DESC
+LIMIT
+    1;

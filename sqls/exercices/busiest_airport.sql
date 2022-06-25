@@ -1,5 +1,4 @@
-INSERT INTO
-    busiest_airport_mv
+WITH busiest_airport AS (
 SELECT
     AIRPORT.AIRPORT,
     COUNT(*) NUMBER_OF_FLIGHTS
@@ -10,4 +9,6 @@ FROM
 GROUP BY
     AIRPORT.AIRPORT
 ORDER BY
-    COUNT(*) DESC;
+    COUNT(*) DESC)
+
+INSERT INTO busiest_airport_mv SELECT AIRPORT, NUMBER_OF_FLIGHTS FROM busiest_airport LIMIT 1;
