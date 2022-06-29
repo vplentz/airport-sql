@@ -1,5 +1,5 @@
 INSERT INTO
-    busiest_state_regional_trips_mv
+    busiest_state_regional_flights_mv
 SELECT
     ORIGIN_AIRPORT.STATE,
     COUNT(*) AS NUMBER_OF_FLIGHTS
@@ -12,4 +12,5 @@ WHERE
 GROUP BY
     ORIGIN_AIRPORT.STATE
 ORDER BY
-    COUNT(*) DESC;
+    COUNT(*) DESC
+LIMIT 10;
