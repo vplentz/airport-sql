@@ -1,6 +1,4 @@
-# Kayak Take Home SQL Exercise
-
-## Assignment description
+## Project description
 
 Using the data sets provided here https://www.kaggle.com/usdot/flight-delays please provide
 the DDL necessary to create tables for storing the 3 data sets.
@@ -15,7 +13,7 @@ Assuming you’ve loaded the data into 3 tables, please write SQL to answer foll
 ## First Step before running:
 Download the data and paste into raw_data/.
 ```
-kayak-airports-sql
+airport-sql
 |---- /raw_data
 |-------- /raw_data/airlines.csv
 |-------- /raw_data/airports.csv
@@ -52,7 +50,7 @@ With the admin is possible to do some exploration in the tables (but you probabl
 * Copy and Run the desired SQL Query;
 
 ### Using the MySQL container:
-* Get inside the container ```docker exec -it kayak-airports-sql_db_1 bash```;
+* Get inside the container ```docker exec -it airport-sql_db_1 bash```;
 * Run ```mysql -uroot -p domestic_flights```;
 * Copy and Run the desired SQL query;
 
@@ -64,7 +62,7 @@ With the admin is possible to do some exploration in the tables (but you probabl
 
 **Example running those queries:**
 ```bash
-docker exec kayak-airports-sql_db_1 sh -c "mysql -uroot -pexample domestic_flights < sqls/exercises/busiest_day_of_week.sql"
+docker exec airport-sql_db_1 sh -c "mysql -uroot -pexample domestic_flights < sqls/exercises/busiest_day_of_week.sql"
 ```
 
 
@@ -78,6 +76,6 @@ Views for each exercise:
 
 **Example selecting from those views:**
 ```bash
-docker exec kayak-airports-sql_db_1 sh -c "mysql -uroot -pexample domestic_flights -e 'SELECT * FROM busiest_state_mv'"
+docker exec airport-sql_db_1 sh -c "mysql -uroot -pexample domestic_flights -e 'SELECT * FROM busiest_state_mv'"
 ```
 If you want only the first one then add ```LIMIT 1``` to the end of the SQL query.
